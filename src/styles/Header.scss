@@ -1,0 +1,25 @@
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-transform: capitalize;
+
+
+}
+
+nav a {
+   color: #FF6060;
+   font-size:large;
+   font-weight: 600;
+   padding-left: 40px;
+   text-decoration: none;
+ 
+}
+
+nav a.active{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: #FF6060;
+ 
+}

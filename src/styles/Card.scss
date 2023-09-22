@@ -1,0 +1,22 @@
+.contenair {
+    display: grid;
+    justify-items: CENTER;
+    grid-template-columns: repeat(3, 1fr);;
+    background-color: #F6F6F6;
+    gap: 30px;
+    border-radius: 25px;
+    margin-top: 30px;
+    padding: 40px 30px 40px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    width: 240px;
+    // background-color: #FF6060;;
+    padding: 20px;
+    background: rgb(255,96,96);
+    background: linear-gradient(170deg, rgba(255,96,96,0.9724264705882353) 62%, rgba(0,0,0,0.33657212885154064) 100%);
+}

@@ -1,0 +1,35 @@
+.button-collapsible {
+    position: relative;
+    background-color: #FF6060;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.3em;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+  }
+
+
+.container-collapse {
+    padding-top: 30px;
+}
+
+.button-collapsible > .arrow-back {
+    position: absolute;
+    color: red;
+    right: 10px;
+    top: 14px
+}
+
+.display-content {
+    display:none;
+    padding: 40px;
+    margin-bottom: 20px;
+    background-color: #F6F6F6;
+    border-bottom: 5px;
+}
