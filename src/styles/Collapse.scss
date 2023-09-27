@@ -1,3 +1,7 @@
+.header {
+    padding-bottom: 15px;
+}
+
 .button-collapsible {
     position: relative;
     background-color: #FF6060;
@@ -10,26 +14,35 @@
     outline: none;
     font-size: 1.3em;
     border-radius: 5px;
-    margin-bottom: 30px;
+
 
   }
 
 
 .container-collapse {
     padding-top: 30px;
+    margin: auto;
+  width: 85%;
+   
+ 
 }
 
-.button-collapsible > .arrow-back {
+.button-collapsible > .arrow {
     position: absolute;
     color: red;
     right: 10px;
-    top: 14px
+    top: 14px;
+    // transform: rotate(180deg);
 }
 
+
 .display-content {
-    display:none;
-    padding: 40px;
+    color: #FF6060;
+    font-size: 1.1em;
+    padding: 20px;
     margin-bottom: 20px;
     background-color: #F6F6F6;
     border-bottom: 5px;
+    transition: transform 0.3s ease
+   
 }

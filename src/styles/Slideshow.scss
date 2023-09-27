@@ -1,0 +1,30 @@
+.slideshow {
+    position: relative;
+   padding-top: 40px;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+    
+}
+
+
+.arrow-left {
+    position: absolute;
+    color: red;
+    top: 42%;
+    cursor: pointer;    
+    
+}
+.arrow-right {
+    position: absolute;
+    color: red;
+    top: 35%;
+    right: 0;
+    transform: rotate(180deg);
+    margin-left: 90px;
+    cursor: pointer;
+}

@@ -7,6 +7,7 @@ import Error from "./components/Error/index";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/App.scss";
+import Accommodation from "./pages/Accommodation";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/accommodation/:id" element={<Accommodation />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
