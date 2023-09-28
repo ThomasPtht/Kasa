@@ -1,3 +1,62 @@
-h2 {
-    color: #FF6060;
+:root {
+    --primary-color: #ff6060;
+}
+
+.title-accommodation {
+    color: var(--primary-color);
+}
+
+.button-collapse {
+    display: flex;
+    width:  100%;
+    gap: 50px;
+}
+
+
+
+.location {
+    color: var(--primary-color);
+    
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.tag {
+    display: flex;
+    color: white;
+    border-radius: 10px;
+    height: 25px;
+    min-width: 115px;
+    background-color: #FF6060;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.block {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.host img {
+    border-radius: 50%;
+    width: 40%;
+}
+
+.name {
+    display: flex;
+    padding: 5px;
+}
+
+.host {
+    color: var(--primary-color);
 }

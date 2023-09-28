@@ -3,7 +3,6 @@ import { accommodationList } from "../datas/accommodationList";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
 import { useParams } from "react-router-dom";
-import Tag from "../components/Tag";
 import Rate from "../components/Rate";
 import "../styles/Accommodation.scss";
 
@@ -14,25 +13,39 @@ const Accommodation = () => {
   );
 
   return (
-    <div>
+    <div className="accommodation-container">
       <Slideshow pictures={selectedAccommodation.pictures} />
 
-      <div
-        style={{
-          display: "flex",
-          width: "95%",
-          gap: "50px",
-        }}
-      >
-        <h2>{selectedAccommodation.title}</h2>
+      <div className="block">
+        <div className="title">
+          <h2 className="title-accommodation">{selectedAccommodation.title}</h2>
+          <div className="location">{selectedAccommodation.location}</div>
+        </div>
 
-        <Collapse title="Description">
-          {selectedAccommodation.description}
-        </Collapse>
+        <div className="host">
+          <span className="name">{selectedAccommodation.host.name}</span>
+          <img src={selectedAccommodation.host.picture} alt="host" />
+        </div>
+      </div>
 
-        <Collapse title="Equipements">
-          {selectedAccommodation.equipments}
-        </Collapse>
+      <div className="tags">
+        {selectedAccommodation.tags.map((tag, index) => (
+          <span key={index} className="tag">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="button-collapse">
+        <Collapse
+          title="Description"
+          content={selectedAccommodation.description}
+        ></Collapse>
+
+        <Collapse
+          title="Equipements"
+          content={selectedAccommodation.equipments}
+        ></Collapse>
       </div>
     </div>
   );

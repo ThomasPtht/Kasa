@@ -1,7 +1,8 @@
 import React from "react";
+import star from "../assets/star.png";
 
-function Rate(props) {
+const Rate = () => {
   return <div></div>;
-}
+};
 
 export default Rate;
