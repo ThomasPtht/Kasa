@@ -19,7 +19,7 @@ const Banner = () => {
     <div className="banner">
       <img src={bannerImage} alt="bannière kasa" className="banner-img" />
       {showTitle && (
-        <div className="title">
+        <div className="banner-title">
           <h1>Chez vous, partout et ailleurs</h1>
         </div>
       )}

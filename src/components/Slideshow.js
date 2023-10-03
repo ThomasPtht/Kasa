@@ -21,14 +21,19 @@ const Slideshow = ({ pictures }) => {
     );
   };
 
+  // Condition pour afficher les flèches uniquement si plus d'une image est présente
+  const showArrows = pictures.length > 1;
+
   return (
     <div className="slideshow">
-      <img
-        className="arrow-left"
-        src={arrowBig}
-        alt="Précédent"
-        onClick={handlePreviousClick}
-      />
+      {showArrows && (
+        <img
+          className="arrow-left"
+          src={arrowBig}
+          alt="Précédent"
+          onClick={handlePreviousClick}
+        />
+      )}
 
       {pictures.length > 0 && (
         <img
@@ -38,12 +43,20 @@ const Slideshow = ({ pictures }) => {
         />
       )}
 
-      <img
-        className="arrow-right"
-        src={arrowBig}
-        alt="Suivant"
-        onClick={handleNextClick}
-      />
+      {showArrows && (
+        <img
+          className="arrow-right"
+          src={arrowBig}
+          alt="Suivant"
+          onClick={handleNextClick}
+        />
+      )}
+
+      {pictures.length > 1 && (
+        <div className="pagination">
+          {`${currentImageIndex + 1} / ${pictures.length}`}
+        </div>
+      )}
     </div>
   );
 };

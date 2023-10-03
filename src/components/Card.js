@@ -16,7 +16,7 @@ const Card = () => {
           <Link to={`/accommodation/${accommodation.id}`}>
             <img src={accommodation.cover} alt="{accommodation.title}" />
           </Link>
-          <h2>{accommodation.title}</h2>
+          <h2 className="accommodation-title">{accommodation.title}</h2>
         </div>
       ))}
     </div>

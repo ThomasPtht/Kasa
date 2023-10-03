@@ -1,23 +1,29 @@
-:root {
-    --primary-color: #ff6060;
+$main-color: #ff6060;
+
+.title-and-location {
+    color: $main-color;
+    
 }
 
 .title-accommodation {
-    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 2.2em;
 }
 
-.button-collapse {
+
+.buttons-collapse {
     display: flex;
     width:  100%;
-    gap: 50px;
+    gap: 70px;
+    border-radius: 20px;
 }
 
-
-
-.location {
-    color: var(--primary-color);
-    
+.tags-and-rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .tags {
     display: flex;
@@ -31,7 +37,7 @@
     border-radius: 10px;
     height: 25px;
     min-width: 115px;
-    background-color: #FF6060;
+    background-color: $main-color;
     font-size: 0.9em;
     text-align: center;
     justify-content: center;
@@ -41,22 +47,24 @@
 
 }
 
-.block {
+.block-title {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-top: 20px;
+}
+
+.host {
+    color: $main-color;
+    margin-right: 0;
 }
 
 .host img {
     border-radius: 50%;
-    width: 40%;
+    width: 30%;
 }
 
-.name {
-    display: flex;
-    padding: 5px;
+.host-name {
+    margin: 0px;
+   
 }
 
-.host {
-    color: var(--primary-color);
-}
