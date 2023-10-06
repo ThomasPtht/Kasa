@@ -1,11 +1,10 @@
 import React from "react";
 import { accommodationList } from "../datas/accommodationList";
+import { Link } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
 import { useParams } from "react-router-dom";
-// import Rate from "../components/Rate";
 import "../styles/Accommodation.scss";
-import star from "../assets/star.png";
 import Rate from "../components/Rate";
 
 const Accommodation = () => {
@@ -25,7 +24,7 @@ const Accommodation = () => {
         </div>
 
         <div className="host">
-          <span className="host-name">{selectedAccommodation.host.name}</span>
+          <div className="host-name">{selectedAccommodation.host.name}</div>
           <img src={selectedAccommodation.host.picture} alt="host" />
         </div>
       </div>
@@ -42,15 +41,19 @@ const Accommodation = () => {
         <Rate />
       </div>
       <div className="buttons-collapse">
-        <Collapse
-          title="Description"
-          content={selectedAccommodation.description}
-        ></Collapse>
-
-        <Collapse
-          title="Equipements"
-          content={selectedAccommodation.equipments}
-        ></Collapse>
+        <div className="container-collapse-accommodation">
+          <Collapse
+            title="Description"
+            content={selectedAccommodation.description}
+          ></Collapse>
+        </div>
+        <div className="container-collapse-accommodation">
+          <Collapse
+            title="Equipements"
+            content={selectedAccommodation.equipments}
+            className="equipments"
+          ></Collapse>
+        </div>
       </div>
     </div>
   );

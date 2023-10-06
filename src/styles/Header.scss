@@ -3,17 +3,32 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 text-transform: capitalize;
+}
 
+.logo-header {
+    @media (max-width: 500px) {
+        width: 33%; ;
+    }
+}
 
+nav {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 500px) {
+        font-size: 0.6em ;
+    }
 }
 
 nav a {
    color: #FF6060;
-   font-size:large;
+   font-size: 1.5em;
    font-weight: 600;
-   padding-left: 40px;
-   text-decoration: none;
  
+   text-decoration: none;
+
+   @media (max-width: 500px) {
+    text-transform:uppercase;
+} 
 }
 
 nav a.active{

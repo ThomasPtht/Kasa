@@ -10,8 +10,10 @@ const Collapse = ({ title, content }) => {
     setToggle(!toggle);
   };
 
+  const isArray = Array.isArray(content);
+
   return (
-    <div className="container-collapse">
+    <>
       <button className="button-collapsible">
         {title}
         <img
@@ -31,9 +33,17 @@ const Collapse = ({ title, content }) => {
           display: toggle ? "block" : "none",
         }}
       >
-        <div className="content">{content}</div>
+        {isArray ? (
+          <ul className="list-style">
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          content
+        )}
       </div>
-    </div>
+    </>
   );
 };
 

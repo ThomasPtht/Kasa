@@ -10,10 +10,18 @@ const Rate = () => {
     (accommodation) => accommodation.id === id
   );
 
+  const maxStars = 5; // Nombre maximum d'étoiles à afficher
+  const rating = selectedAccommodation.rating; // Note de l'hébergement
+
   return (
     <div className="stars">
-      {Array.from({ length: selectedAccommodation.rating }).map((_, index) => (
-        <img key={index} src={star} alt="star" />
+      {Array.from({ length: maxStars }).map((_, index) => (
+        <img
+          key={index}
+          src={star}
+          alt="star"
+          className={index < rating ? "stars-color" : ""}
+        />
       ))}
     </div>
   );

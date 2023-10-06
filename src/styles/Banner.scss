@@ -1,7 +1,9 @@
 .banner {
     position: relative;
-   padding-top: 20px;
-  
+   padding-top: 10px;
+   @media (max-width: 500px) {
+    padding-top: 5px;
+}
   
 }
 
@@ -12,8 +14,10 @@
     height: 223px;
     width: 100%;
     object-fit: cover;
-   
     filter: brightness(70%);
+    @media (max-width: 500px) {
+      height: 111px;
+  }
 }
 
 
@@ -24,5 +28,10 @@
     top:50%; 
     left: 50%; 
     text-align: center;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    @media (max-width: 500px) {
+      font-size: 0.75em;
+      text-align: left;
+      transform: translate(-80%, -50%);
+  }
   }

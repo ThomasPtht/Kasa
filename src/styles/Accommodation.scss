@@ -16,19 +16,23 @@ $main-color: #ff6060;
     width:  100%;
     gap: 70px;
     border-radius: 20px;
+   padding-top: 20px;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
 }
 
 .tags-and-rate {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 15px;
 }
 
 
 .tags {
     display: flex;
     gap: 10px;
-    padding-top: 30px;
 }
 
 .tag {
@@ -50,21 +54,37 @@ $main-color: #ff6060;
 .block-title {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
 }
 
 .host {
     color: $main-color;
-    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 
 .host img {
     border-radius: 50%;
-    width: 30%;
+    width: 64px;
+    margin-left: 10px;
+ 
 }
 
 .host-name {
-    margin: 0px;
-   
+    width: 80px;
+    text-align:right;
 }
 
+.container-collapse-accommodation {
+    width: 100%;
+    border-radius: 30px;
+
+}
+
+.button-collapsible {
+
+}

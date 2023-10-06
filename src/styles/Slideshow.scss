@@ -8,9 +8,16 @@
     height: 415px;
     border-radius: 25px;
     object-fit: cover;
-    
+    @media (max-width: 500px) {
+        height: 255px;
+    }
 }
 
+.arrow-left {
+    @media (max-width: 500px) {
+        width: 24px;
+    }
+}
 
 .arrow-left {
     position: absolute;
