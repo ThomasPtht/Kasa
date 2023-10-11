@@ -27,12 +27,7 @@ const Collapse = ({ title, content }) => {
           }}
         />
       </button>
-      <div
-        className="display-content"
-        style={{
-          display: toggle ? "block" : "none",
-        }}
-      >
+      <div className={`display-content ${toggle ? "expanded" : "collapsed"}`}>
         {isArray ? (
           <ul className="list-style">
             {content.map((item, index) => (

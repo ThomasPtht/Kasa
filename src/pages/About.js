@@ -5,7 +5,7 @@ import "../styles/About.scss";
 
 const About = () => {
   return (
-    <div>
+    <div className="about-container">
       <Banner />
       <div className="container-collapse">
         <Collapse
@@ -14,24 +14,21 @@ const About = () => {
       photos sont conformes aux logements, et toutes les informations sont
       régulièrement vérifiées par nos équipes."
         />
-      </div>
-      <div className="container-collapse">
+
         <Collapse
           title="Respect"
           content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
       comportement discriminatoire ou de perturbation du voisinage
       entraînera une exclusion de notre plateforme."
         />
-      </div>
-      <div className="container-collapse">
+
         <Collapse
           title="Service"
           content="Nos équipes se tiennent à votre disposition pour vous fournir une
       expérience parfaite. N'hésitez pas à nous contacter si vous avez la
       moindre question."
         />
-      </div>
-      <div className="container-collapse">
+
         <Collapse
           title="Sécurité"
           content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que

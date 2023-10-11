@@ -15,10 +15,10 @@ $main-color: #ff6060;
     display: flex;
     width:  100%;
     gap: 70px;
-    border-radius: 20px;
    padding-top: 20px;
-    @media (max-width: 500px) {
+    @media (max-width: 810px) {
       flex-direction: column;
+      gap:0;
     }
 }
 
@@ -26,13 +26,24 @@ $main-color: #ff6060;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 8px;
+    @media (max-width: 810px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+     
+      }
 }
 
 
 .tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    @media (max-width: 810px) {
+        order: 2;
+       
+    }
 }
 
 .tag {
@@ -48,22 +59,31 @@ $main-color: #ff6060;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-
-}
-
-.block-title {
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 500px) {
-        flex-direction: column;
+    @media (max-width: 810px) {
+        
+       
     }
 }
+
+// .block-title-host {
+//     display: flex;
+//     justify-content: space-between;
+//     @media (max-width: 810px) {
+//         // flex-direction: column;
+//         // order:1;
+//     }
+// }
+
+
 
 .host {
     color: $main-color;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 810px) {
+        order: 4;
+      }
    
 }
 
@@ -79,12 +99,23 @@ $main-color: #ff6060;
     text-align:right;
 }
 
-.container-collapse-accommodation {
-    width: 100%;
-    border-radius: 30px;
-
+.stars {
+    display:flex;
+    @media (max-width: 810px) {
+        order: 3;
+    }
+ 
 }
 
-.button-collapsible {
+.container-collapse-accommodation {
+    width: 100%;
+}
 
+.block {
+    @media (max-width: 810px) {
+ display: flex;
+ flex-direction: column;
+    }
+
+   
 }

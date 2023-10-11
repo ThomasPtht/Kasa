@@ -1,9 +1,8 @@
 import React from "react";
 import { accommodationList } from "../datas/accommodationList";
-import { Link } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import "../styles/Accommodation.scss";
 import Rate from "../components/Rate";
 
@@ -13,11 +12,17 @@ const Accommodation = () => {
     (accommodation) => accommodation.id === id
   );
 
+  // Si l'ID n'est pas valide, effectuer une redirection
+  if (!selectedAccommodation) {
+    return <Navigate to="/error" />;
+  }
+
   return (
     <div className="accommodation-container">
       <Slideshow pictures={selectedAccommodation.pictures} />
 
-      <div className="block-title">
+      <div className="block">
+        {/* <div className="block-title-host"> */}
         <div className="title-and-location">
           <h2 className="title-accommodation">{selectedAccommodation.title}</h2>
           <div className="location">{selectedAccommodation.location}</div>
@@ -25,21 +30,26 @@ const Accommodation = () => {
 
         <div className="host">
           <div className="host-name">{selectedAccommodation.host.name}</div>
-          <img src={selectedAccommodation.host.picture} alt="host" />
+          <img
+            src={selectedAccommodation.host.picture}
+            alt={"host" + selectedAccommodation.host.name}
+          />
+        </div>
+        {/* </div> */}
+
+        <div className="tags-and-rate">
+          <div className="tags">
+            {selectedAccommodation.tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <Rate />
         </div>
       </div>
 
-      <div className="tags-and-rate">
-        <div className="tags">
-          {selectedAccommodation.tags.map((tag, index) => (
-            <span key={index} className="tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <Rate />
-      </div>
       <div className="buttons-collapse">
         <div className="container-collapse-accommodation">
           <Collapse

@@ -10,7 +10,7 @@ const Card = () => {
 
   // affichage (render  )
   return (
-    <div className="containair">
+    <div className="container">
       {accommodationList.map((accommodation) => (
         <div className="box" key={accommodation.id}>
           <Link to={`/accommodation/${accommodation.id}`}>

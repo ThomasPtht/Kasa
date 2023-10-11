@@ -14,20 +14,11 @@
     outline: none;
     font-size: 1.3em;
     border-radius: 5px;
-    
-
+    margin-bottom: -25px;
+   
   }
 
 
-// .container-collapse {
-//     padding-top: 30px;
-//     margin: auto;
-//   width: 85%;
-//   @media (max-width: 500px) {
-//     width: 100%;
-// }
- 
-// }
 
 .button-collapsible > .arrow {
     position: absolute;
@@ -41,10 +32,10 @@
     color: #FF6060;
     font-size: 1.1em;
     padding: 20px;
-    margin-bottom: 20px;
     background-color: #F6F6F6;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-top: 20px;
 }
 
 .list-style {
@@ -52,3 +43,19 @@
   margin-top: 5px;
   padding-left: 5px;
 }
+
+.expanded {
+  max-height: 1000px;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.collapsed {
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
