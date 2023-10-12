@@ -8,17 +8,17 @@ text-transform: capitalize;
 
 .logo-header {
 width: max(14vw, 145px);
-    @media (max-width: 500px) {
+    @media (max-width: 560px) {
         max-width: 45%; 
     }
 }
 
 nav {
     display: flex;
-    gap: 50px;
-    @media (max-width: 810px) {
-        font-size: 0.6em;
-        gap: 20px
+    gap: 40px;
+    @media (max-width: 560px) {
+        font-size: 0.52em;
+        gap: 15px
     }
 }
 
@@ -29,7 +29,7 @@ nav a {
  
    text-decoration: none;
 
-   @media (max-width: 810px) {
+   @media (max-width: 560px) {
     text-transform:uppercase;
 } 
 }

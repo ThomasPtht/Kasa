@@ -2,12 +2,23 @@ $main-color: #ff6060;
 
 .title-and-location {
     color: $main-color;
+    grid-area: title;
     
 }
 
 .title-accommodation {
     margin-bottom: 5px;
     font-size: 2.2em;
+    @media (max-width: 560px) {
+       font-size: 1.2em;
+      }
+}
+
+
+.location {
+    @media (max-width: 560px) {
+        font-size: 0.9em;
+       }
 }
 
 
@@ -16,32 +27,32 @@ $main-color: #ff6060;
     width:  100%;
     gap: 70px;
    padding-top: 20px;
-    @media (max-width: 810px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       gap:0;
     }
 }
 
-.tags-and-rate {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 8px;
-    @media (max-width: 810px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
+// .tags-and-rate {
+//     // display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-top: 8px;
+//     @media (max-width: 560px) {
+//         // flex-direction: column;
+//         // align-items: flex-start;
+//         // gap: 25px;
      
-      }
-}
+//       }
+// }
 
 
 .tags {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    grid-area: tags;
     @media (max-width: 810px) {
-        order: 2;
+      
        
     }
 }
@@ -51,17 +62,16 @@ $main-color: #ff6060;
     color: white;
     border-radius: 10px;
     height: 25px;
-    min-width: 115px;
     background-color: $main-color;
     font-size: 0.9em;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    @media (max-width: 810px) {
-        
-       
+    padding: 0.6% 3%;
+
+    @media (max-width: 560px) {
+        font-size: 0.7em;
+    
     }
 }
 
@@ -80,9 +90,12 @@ $main-color: #ff6060;
     color: $main-color;
     display: flex;
     align-items: center;
-    justify-content: center;
-    @media (max-width: 810px) {
-        order: 4;
+    justify-content: flex-end;
+    grid-area: host;
+    @media (max-width: 800px) {
+      grid-area: rate-host;
+      justify-self: end;
+    
       }
    
 }
@@ -101,21 +114,57 @@ $main-color: #ff6060;
 
 .stars {
     display:flex;
-    @media (max-width: 810px) {
-        order: 3;
+    justify-content: flex-end;
+    grid-area: rate;
+    @media (max-width: 800px) {
+        grid-area: rate-host;
+        justify-self: start;
+        
     }
- 
 }
+
+@media (max-width: 800px) {
+    .stars-color,
+    .stars-grey {
+      grid-area: rate-host;
+      justify-self: start;
+      width: 30px;
+    }
+  }
 
 .container-collapse-accommodation {
     width: 100%;
 }
 
-.block {
-    @media (max-width: 810px) {
- display: flex;
- flex-direction: column;
-    }
+.grid-container {
 
-   
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-areas: 
+    "title host"
+    "tags rate";
+    align-items: center;
+    gap: 15px;
+
+
 }
+@media (max-width:800px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+    "title"
+    "tags"
+    "rate-host";
+    align-items: center;
+    grid-row-gap: 20px;
+ 
+    }
+  }
+
+  .stars, .host {
+    display: flex;
+    
+    text-align: center; /* Pour aligner horizontalement rate et host */
+  }

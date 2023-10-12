@@ -14,17 +14,16 @@
 }
 
 .arrow-left {
-    @media (max-width: 500px) {
+    position: absolute;
+    top: 42%;
+    cursor: pointer;   
+    @media (max-width: 560px) {
         width: 24px;
+        top: 50%;
     }
 }
 
-.arrow-left {
-    position: absolute;
-    top: 42%;
-    cursor: pointer;    
-    
-}
+
 .arrow-right {
     position: absolute;
     top: 35%;
@@ -32,6 +31,10 @@
     transform: rotate(180deg);
     margin-left: 90px;
     cursor: pointer;
+    @media (max-width: 560px) {
+        width: 24px;
+        top: 47%;
+    }
 }
 
 .pagination {
@@ -39,4 +42,7 @@
     bottom: 35px;
     left: 50%;
     color: white;
+    @media (max-width: 560px) {
+      display: none;
+    }
 }

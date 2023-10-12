@@ -21,7 +21,7 @@ const Accommodation = () => {
     <div className="accommodation-container">
       <Slideshow pictures={selectedAccommodation.pictures} />
 
-      <div className="block">
+      <div className="grid-container">
         {/* <div className="block-title-host"> */}
         <div className="title-and-location">
           <h2 className="title-accommodation">{selectedAccommodation.title}</h2>
@@ -37,17 +37,18 @@ const Accommodation = () => {
         </div>
         {/* </div> */}
 
-        <div className="tags-and-rate">
-          <div className="tags">
-            {selectedAccommodation.tags.map((tag, index) => (
-              <span key={index} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <Rate />
+        {/* <div className="tags-and-rate"> */}
+        <div className="tags">
+          {selectedAccommodation.tags.map((tag, index) => (
+            <div key={index} className="tag">
+              {tag}
+            </div>
+          ))}
         </div>
+
+        <Rate />
+
+        {/* </div> */}
       </div>
 
       <div className="buttons-collapse">

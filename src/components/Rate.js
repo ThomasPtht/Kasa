@@ -20,7 +20,7 @@ const Rate = () => {
           key={index}
           src={star}
           alt="star"
-          className={index < rating ? "stars-color" : ""}
+          className={index < rating ? "stars-color" : "stars-grey"}
         />
       ))}
     </div>
