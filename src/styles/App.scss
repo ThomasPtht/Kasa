@@ -2,7 +2,7 @@ body {
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
-    margin-bottom:50px;
+margin-bottom: -8px;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -16,10 +16,7 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
 
-  html, body {
-    height: calc(100% - 209px);
-  }
   
   #root {
-    // height: calc(100% - 209px);
+ 
   }

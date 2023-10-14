@@ -6,9 +6,7 @@
 }
 
 .error {
-    // flex-grow: 1;
-    /* Utilisation de calc pour la hauteur du contenu principal */
-    height: calc(100% - 209px);
+    min-height: calc(100vh - 209px);
 }
 
 .error

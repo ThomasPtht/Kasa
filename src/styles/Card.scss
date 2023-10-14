@@ -23,7 +23,6 @@
     align-items: center;
     justify-content: space-between;
     height: 340px;
-    width: 100%;
     @media (max-width: 810px) {
         // height: 200px
     }
@@ -31,11 +30,7 @@
         
     }
 }
-.box {
-    position: relative;
-    overflow: hidden;
-  }
-  
+
   .box::before {
     content: "";
     position: absolute;
@@ -44,6 +39,7 @@
     right: 0;
     height: 20%; 
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)); 
+    border-radius: 10px;
   }
 
 
