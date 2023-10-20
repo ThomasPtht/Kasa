@@ -6,16 +6,16 @@ const Slideshow = ({ pictures }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handlePreviousClick = () => {
-    // Si l'index est à la première image, passez à la dernière image.
-    // Sinon, décrémentez l'index de 1.
+    // Si l'index est à la première image, passer à la dernière image.
+    // Sinon, décrémenter l'index de 1.
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
     );
   };
 
   const handleNextClick = () => {
-    // Si l'index est à la dernière image, passez à la première image.
-    // Sinon, incrémentez l'index de 1.
+    // Si l'index est à la dernière image, passer à la première image.
+    // Sinon, incrémenter l'index de 1.
     setCurrentImageIndex((prevIndex) =>
       prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
     );
@@ -54,7 +54,8 @@ const Slideshow = ({ pictures }) => {
 
       {pictures.length > 1 && (
         <div className="pagination">
-          {`${currentImageIndex + 1} / ${pictures.length}`}
+          {`${currentImageIndex + 1} / ${pictures.length}`} // Affiche la
+          pagination de l'image actuelle.
         </div>
       )}
     </div>

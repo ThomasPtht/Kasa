@@ -1,5 +1,9 @@
 $main-color: #ff6060;
 
+.accommodation-container {
+    min-height: calc(100vh - 209px)
+}
+
 .title-and-location {
     color: $main-color;
     grid-area: title;
@@ -33,18 +37,6 @@ $main-color: #ff6060;
     }
 }
 
-// .tags-and-rate {
-//     // display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding-top: 8px;
-//     @media (max-width: 560px) {
-//         // flex-direction: column;
-//         // align-items: flex-start;
-//         // gap: 25px;
-     
-//       }
-// }
 
 
 .tags {
@@ -74,16 +66,6 @@ $main-color: #ff6060;
     
     }
 }
-
-// .block-title-host {
-//     display: flex;
-//     justify-content: space-between;
-//     @media (max-width: 810px) {
-//         // flex-direction: column;
-//         // order:1;
-//     }
-// }
-
 
 
 .host {
@@ -165,6 +147,5 @@ $main-color: #ff6060;
 
   .stars, .host {
     display: flex;
-    
-    text-align: center; /* Pour aligner horizontalement rate et host */
+    text-align: center; 
   }

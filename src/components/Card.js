@@ -4,11 +4,6 @@ import "../styles/Card.scss";
 import { accommodationList } from "../datas/accommodationList";
 
 const Card = () => {
-  // state (état, données)
-
-  // comportements
-
-  // affichage (render  )
   return (
     <div className="container">
       {accommodationList.map((accommodation) => (

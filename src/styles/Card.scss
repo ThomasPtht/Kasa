@@ -23,12 +23,7 @@
     align-items: center;
     justify-content: space-between;
     height: 340px;
-    @media (max-width: 810px) {
-        // height: 200px
-    }
-    @media (max-width: 375px) {
-        
-    }
+  
 }
 
   .box::before {
@@ -48,15 +43,9 @@
     height:100%;
     object-fit: cover;
     border-radius: 10px;
-  
-    @media (max-width: 810px) {
-      
+
     }
-    @media (max-width: 375px) {
-        // max-height: 100%;
-    }
- }
- 
+
 
 .box a {
     width:100%;
