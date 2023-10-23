@@ -4,10 +4,10 @@ import logo from "../../assets/LOGO.png";
 import "../../styles/Header.scss";
 
 function Header() {
-  // Utilisez useLocation pour obtenir l'URL actuelle
+  // Utiliser useLocation pour obtenir l'URL actuelle
   const location = useLocation();
 
-  // Déterminez quelle classe appliquer en fonction de l'URL actuelle
+  // Déterminer quelle classe appliquer en fonction de l'URL actuelle
   const isHomeActive = location.pathname === "/";
   const isAboutActive = location.pathname === "/about";
 

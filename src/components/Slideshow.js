@@ -34,7 +34,6 @@ const Slideshow = ({ pictures }) => {
           onClick={handlePreviousClick}
         />
       )}
-
       {pictures.length > 0 && (
         <img
           className="slideshow-image"
@@ -42,7 +41,6 @@ const Slideshow = ({ pictures }) => {
           alt={` ${currentImageIndex + 1}`}
         />
       )}
-
       {showArrows && (
         <img
           className="arrow-right"
@@ -51,11 +49,10 @@ const Slideshow = ({ pictures }) => {
           onClick={handleNextClick}
         />
       )}
-
+      {/* Affiche la pagination de l'image actuelle. */}
       {pictures.length > 1 && (
         <div className="pagination">
-          {`${currentImageIndex + 1} / ${pictures.length}`} // Affiche la
-          pagination de l'image actuelle.
+          {`${currentImageIndex + 1} / ${pictures.length}`}
         </div>
       )}
     </div>

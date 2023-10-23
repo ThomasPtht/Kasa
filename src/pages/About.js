@@ -1,12 +1,13 @@
 import React from "react";
 import Banner from "../components/Banner";
+import bannerAbout from "../assets/banner-about.png";
 import Collapse from "../components/Collapse";
 import "../styles/About.scss";
 
 const About = () => {
   return (
     <div className="about-container">
-      <Banner />
+      <Banner picture={bannerAbout} />
       <div className="container-collapse">
         <Collapse
           title="Fiabilité"
